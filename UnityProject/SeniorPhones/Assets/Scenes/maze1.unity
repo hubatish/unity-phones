@@ -97,6 +97,7 @@ GameObject:
   - 114: {fileID: 19300060}
   - 114: {fileID: 19300059}
   - 50: {fileID: 19300061}
+  - 61: {fileID: 19300062}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -183,7 +184,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!61 &19300062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19300056}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .540000021, y: .540000021}
 --- !u!1 &1511060932
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +314,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .639999986, y: .639999986}
+  m_Size: {x: 1, y: 1}
 --- !u!50 &2140855629
 Rigidbody2D:
   serializedVersion: 2
