@@ -8,15 +8,14 @@ public class DesktopController : ZBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 
     void Update() { }
-	
+    Vector3 prevPos;
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        float delta = 0.01f;
+        float delta = 0f;
         if (Input.GetAxis(inputX) < -delta)
         {
             Cached<PlayerMovement>().MoveInDirection(Vector2.left);
