@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class PlayerMovement : ZBehaviour {
+public class PlayerMovement : NetworkBehaviour {
 	
 	public float moveSpeed = 2.0f;
 
@@ -10,7 +11,8 @@ public class PlayerMovement : ZBehaviour {
 	
 	}
 	
-    public void MoveInDirection(Vector2 direction)
+    [Command]
+    public void CmdMoveInDirection(Vector2 direction)
     {
         Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
         transform.Translate(velocity);
