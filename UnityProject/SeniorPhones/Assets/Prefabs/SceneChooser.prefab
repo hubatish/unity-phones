@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 466494}
   - 114: {fileID: 11420000}
   - 114: {fileID: 11429368}
-  - 114: {fileID: 11401226}
+  - 114: {fileID: 11405996}
   m_Layer: 0
   m_Name: SceneChooser
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11401226
+--- !u!114 &11405996
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -38,9 +38,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 165220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63327132a0ddeaa44b9ec91f6a29c9e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4390a38cfc5f93048add0126fe865117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2
 --- !u!114 &11420000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +106,10 @@ Prefab:
       propertyPath: client
       value: 
       objectReference: {fileID: 476472, guid: 39ac6775898901040ab8dd3104543ccc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165220}

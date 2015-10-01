@@ -18,18 +18,18 @@ public class DesktopController : ZBehaviour {
         float delta = 0f;
         if (Input.GetAxis(inputX) < -delta)
         {
-            Cached<PlayerMovement>().MoveInDirection(Vector2.left);
+            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.left);
         } else if (Input.GetAxis(inputX) > delta)
         {
-            Cached<PlayerMovement>().MoveInDirection(Vector2.right);
+            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.right);
         }
 
         if (Input.GetAxis(inputY) < -delta)
         {
-            Cached<PlayerMovement>().MoveInDirection(Vector2.down);
+            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.down);
         }else if (Input.GetAxis(inputY) > delta)
         {
-            Cached<PlayerMovement>().MoveInDirection(Vector2.up);
+            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.up);
         }
     }
 }
