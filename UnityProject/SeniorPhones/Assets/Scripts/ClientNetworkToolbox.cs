@@ -14,4 +14,9 @@ public class ClientNetworkToolbox : MonoBehaviour {
 	public PlayerMovement GetNetworkMover(){
 		return transform.parent.GetComponent<PlayerMovement>();
 	}
+
+    public Inventory GetInventory()
+    {
+        return transform.parent.GetComponent<Inventory>();
+    }
 }
