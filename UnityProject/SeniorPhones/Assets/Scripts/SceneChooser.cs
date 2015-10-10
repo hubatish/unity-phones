@@ -21,6 +21,10 @@ public class SceneChooser : NetworkBehaviour
                 DontDestroyOnLoad(gameObject);
                 Application.LoadLevel("clientScene");
             }
+            else
+            {
+                GameObject.Destroy(gameObject);
+            }
         }
         else
         {
