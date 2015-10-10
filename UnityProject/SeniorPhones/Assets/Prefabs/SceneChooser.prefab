@@ -9,12 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 466494}
   - 114: {fileID: 11420000}
-  - 114: {fileID: 11429368}
   - 114: {fileID: 11405996}
   - 114: {fileID: 11477638}
   - 61: {fileID: 6128138}
   - 114: {fileID: 11470886}
   - 50: {fileID: 5075562}
+  - 114: {fileID: 11412896}
   m_Layer: 0
   m_Name: SceneChooser
   m_TagString: Player
@@ -74,7 +74,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4390a38cfc5f93048add0126fe865117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+--- !u!114 &11412896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1be299005d2ab343b29ccb280e23153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 411616, guid: 025096e70c4266b4c8f3bd689592790c, type: 2}
+  client: {fileID: 476472, guid: 39ac6775898901040ab8dd3104543ccc, type: 2}
 --- !u!114 &11420000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,19 +119,6 @@ MonoBehaviour:
     i15: 10
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &11429368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382b4cc70ee20754aa08e987a233310c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 411616, guid: 025096e70c4266b4c8f3bd689592790c, type: 2}
-  client: {fileID: 476472, guid: 39ac6775898901040ab8dd3104543ccc, type: 2}
 --- !u!114 &11470886
 MonoBehaviour:
   m_ObjectHideFlags: 1

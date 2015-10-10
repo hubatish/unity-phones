@@ -1,0 +1,51 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.156 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\CustomStartMenu_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: a74 -> priority: 1 
+  Thread -> id: 27b0 -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.040609 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.333568 ms (FindLiveObjects: 0.031218 ms CreateObjectMapping: 0.020954 ms MarkObjects: 0.270276 ms  DeleteObjects: 0.010691 ms)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1649)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.362649 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 312.
+Total: 0.354096 ms (FindLiveObjects: 0.019244 ms CreateObjectMapping: 0.013257 ms MarkObjects: 0.317745 ms  DeleteObjects: 0.003421 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerDamage.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+A connection has already been set as ready. There can only be one.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

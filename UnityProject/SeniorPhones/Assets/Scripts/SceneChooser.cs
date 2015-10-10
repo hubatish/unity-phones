@@ -26,11 +26,13 @@ public class SceneChooser : NetworkBehaviour
         {
             Transform spawnedPlayer = (Transform)GameObject.Instantiate(player, transform.position, Quaternion.identity);
             spawnedPlayer.parent = transform;
-
-            GameObject ipAddress = new GameObject();
-            ipAddress.AddComponent<GUIText>();
-            ipAddress.transform.position = new Vector3(0.5f, 0.9f, 0.0f);
-            ipAddress.GetComponent<GUIText>().text = "IP Address: " + Network.player.ipAddress;
+            if (isLocalPlayer)
+            {
+                //if we are the server and spawned a local client, use this as a tester
+                //TO DO:
+                //Make sure the compoenent goes on correct game object, possibly the child
+                gameObject.AddComponent<DesktopController>();
+            }
         }
     }
 }
