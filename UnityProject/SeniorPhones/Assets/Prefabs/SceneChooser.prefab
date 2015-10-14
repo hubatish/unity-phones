@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11470886}
   - 50: {fileID: 5075562}
   - 114: {fileID: 11412896}
+  - 114: {fileID: 11415736}
   m_Layer: 0
   m_Name: SceneChooser
   m_TagString: Player
@@ -87,6 +88,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 411616, guid: 025096e70c4266b4c8f3bd689592790c, type: 2}
   client: {fileID: 476472, guid: 39ac6775898901040ab8dd3104543ccc, type: 2}
+--- !u!114 &11415736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91f71b14c8c55049be8ba74aa5357d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11420000
 MonoBehaviour:
   m_ObjectHideFlags: 1
