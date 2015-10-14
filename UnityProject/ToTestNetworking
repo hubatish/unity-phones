@@ -1,0 +1,9 @@
+To run the game:
+Open Unity Project.
+Make a build (or check Builds/ for most recent build)
+Run the build in windowed mode. 
+Open in Unity scene startGame.unity. Press Play.
+In one instance, press "Start Server"
+In other instance, press "Join Game" after typing ip address (localhost) in.
+Complete! You can Move around!
+To restart, close both and reopen!
