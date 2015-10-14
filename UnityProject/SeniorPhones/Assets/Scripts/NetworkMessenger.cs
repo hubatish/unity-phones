@@ -2,21 +2,41 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class NetworkMessenger : NetworkBehaviour {
+/// <summary>
+/// Handle all messages from client to server
+///     Er.. that's too much, but for now it's fine
+/// </summary>
+public class NetworkMessenger : NetworkBehaviour
+{
+    public Server.PlayerMovement playerMovement;
+    public Server.Inventory inventory;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        CmdMove();
-	}
+    protected void Awake()
+    {
+    }
+
+    public void InitializeOnClient()
+    {
+
+    }
+
+    public void InitializeOnServer()
+    {
+        playerMovement = gameObject.GetComponentInChildren<Server.PlayerMovement>();
+        inventory = gameObject.GetComponentInChildren<Server.Inventory>();
+    }
 
     [Command]
-    void CmdMove()
+    public void CmdMoveInDirection(Vector2 direction)
     {
-        transform.position += Vector3.right * Time.deltaTime;
+        playerMovement.MoveInDirection(direction);
+        /*Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
+        transform.Translate(velocity);*/
+    }
+
+    [Command]
+    public void CmdUseItem()
+    {
+        inventory.UseItem();
     }
 }

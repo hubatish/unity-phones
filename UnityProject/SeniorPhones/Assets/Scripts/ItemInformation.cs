@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class ItemInformation : NetworkBehaviour {
+public class ItemInformation : MonoBehaviour {
     public float attackDuration;
 
 	// Use this for initialization

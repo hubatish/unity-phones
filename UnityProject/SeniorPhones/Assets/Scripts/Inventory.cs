@@ -2,34 +2,24 @@
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Inventory : NetworkBehaviour
+namespace Server
 {
-    public GameObject item;
-
-    // Use this for initialization
-    void Start()
+    public class Inventory : MonoBehaviour
     {
-    }
+        public GameObject item;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    [Command]
-    public void CmdUseItem()
-    {
-        if (item != null)
+        public void UseItem()
         {
-            Instantiate(item, transform.position + new Vector3(1, 0, 0), Quaternion.identity);
+            if (item != null)
+            {
+                Instantiate(item, transform.position + new Vector3(1, 0, 0), Quaternion.identity);
+            }
+        }
+
+        public void RemoveItem()
+        {
+            item = null;
         }
     }
-
-    public void RemoveItem()
-    {
-        item = null;
-    }
-
-
 }
+

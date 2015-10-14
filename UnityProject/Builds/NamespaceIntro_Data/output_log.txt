@@ -1,0 +1,55 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.070 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\NamespaceIntro_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 33d8 -> priority: 1 
+  Thread -> id: 3cdc -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.835615 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 308.
+Total: 0.446041 ms (FindLiveObjects: 0.044475 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.366925 ms  DeleteObjects: 0.012401 ms)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1649)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.394295 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 308.
+Total: 0.458871 ms (FindLiveObjects: 0.020954 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.410546 ms  DeleteObjects: 0.005131 ms)
+
+A connection has already been set as ready. There can only be one.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
+aissp: time {40658} lastRecTime {38614} DisTme {2000}, rtt {0} 
+ 
+(Filename:  Line: 1848)
+
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

@@ -4,40 +4,37 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class ButtonInput : NetworkBehaviour {
+public class ButtonInput : MonoBehaviour {
 
-	PlayerMovement playerMovement;
-    Inventory inventory;
+	NetworkMessenger networker;
 
 	// Use this for initialization
 	void Start () {
-		playerMovement = ClientNetworkToolbox.Instance.GetNetworkMover();
-        inventory = ClientNetworkToolbox.Instance.GetInventory();
+		networker = ClientNetworkToolbox.Instance.GetNetworkMessenger();
 	}
 
 	public void MoveRight ()
 	{
-		playerMovement.CmdMoveInDirection(Vector2.right);
+		networker.CmdMoveInDirection(Vector2.right);
 	}
 
 	public void MoveLeft()
 	{
-		playerMovement.CmdMoveInDirection(Vector2.left);
+		networker.CmdMoveInDirection(Vector2.left);
 	}
 
 	public void MoveUp()
 	{
-		playerMovement.CmdMoveInDirection(Vector2.up);
+		networker.CmdMoveInDirection(Vector2.up);
 	}
 
 	public void MoveDown()
 	{
-		playerMovement.CmdMoveInDirection(Vector2.down);
+		networker.CmdMoveInDirection(Vector2.down);
 	}
 
     public void Attack()
     {
-        Debug.Log("ATTCKING");
-        inventory.CmdUseItem();
+        networker.CmdUseItem();
     }
 }

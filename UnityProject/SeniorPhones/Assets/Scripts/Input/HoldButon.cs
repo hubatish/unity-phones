@@ -11,12 +11,12 @@ using UnityEngine.UI;
 public class HoldButon : ZBehaviour
 {
 
-    PlayerMovement playerMovement;
+    NetworkMessenger playerMovement;
 
     // Use this for initialization
     void Start()
     {
-        playerMovement = ClientNetworkToolbox.Instance.GetNetworkMover();
+        playerMovement = ClientNetworkToolbox.Instance.GetNetworkMessenger();
     }
 
     [SerializeField]

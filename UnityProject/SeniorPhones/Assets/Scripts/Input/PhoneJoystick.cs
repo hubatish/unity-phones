@@ -14,11 +14,11 @@ public class PhoneJoystick : MonoBehaviour {
     [SerializeField]
     protected Transform joystickImage;
 
-    PlayerMovement playerMovement;
+    NetworkMessenger playerMovement;
 
 	// Use this for initialization
 	void Start () {
-        playerMovement = ClientNetworkToolbox.Instance.GetNetworkMover();
+        playerMovement = ClientNetworkToolbox.Instance.GetNetworkMessenger();
     }
 	
 	// Update is called once per frame

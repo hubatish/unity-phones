@@ -2,6 +2,7 @@
 //Just for testing
 using UnityEngine;
 using System.Collections;
+using Server;
 
 public class DesktopController : ZBehaviour {
 
@@ -20,18 +21,18 @@ public class DesktopController : ZBehaviour {
         float delta = 0f;
         if (Input.GetAxis(inputX) < -delta)
         {
-            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.left);
+            Cached<PlayerMovement>().MoveInDirection(Vector2.left);
         } else if (Input.GetAxis(inputX) > delta)
         {
-            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.right);
+            Cached<PlayerMovement>().MoveInDirection(Vector2.right);
         }
 
         if (Input.GetAxis(inputY) < -delta)
         {
-            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.down);
+            Cached<PlayerMovement>().MoveInDirection(Vector2.down);
         }else if (Input.GetAxis(inputY) > delta)
         {
-            Cached<PlayerMovement>().CmdMoveInDirection(Vector2.up);
+            Cached<PlayerMovement>().MoveInDirection(Vector2.up);
         }
     }
 }

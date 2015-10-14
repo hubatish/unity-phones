@@ -3,20 +3,24 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class PlayerMovement : NetworkBehaviour {
-	
-	private float moveSpeed = 2.0f;
-    Rigidbody2D rb2d;
-
-    // Use this for initialization
-    void Start () {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-	
-    [Command]
-    public void CmdMoveInDirection(Vector2 direction)
+namespace Server
+{
+    public class PlayerMovement : MonoBehaviour
     {
-        Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
-        transform.Translate(velocity);
+        private float moveSpeed = 2.0f;
+        Rigidbody2D rb2d;
+
+        // Use this for initialization
+        void Start()
+        {
+            rb2d = GetComponent<Rigidbody2D>();
+        }
+
+        public void MoveInDirection(Vector2 direction)
+        {
+            Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
+            transform.Translate(velocity);
+        }
     }
 }
+

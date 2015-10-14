@@ -5,13 +5,15 @@ using System.Net;
 
 public class SceneChooser : NetworkBehaviour
 {
-
     public Transform player;
     public Transform client;
+
+    public NetworkMessenger networker;
 
     // Use this for initialization
     void Start()
     {
+        networker = gameObject.GetComponent<NetworkMessenger>();
         if (!isServer)
         {
             if (isLocalPlayer)
@@ -20,6 +22,7 @@ public class SceneChooser : NetworkBehaviour
                 spawnedClient.parent = transform;
                 DontDestroyOnLoad(gameObject);
                 Application.LoadLevel("clientScene");
+                networker.InitializeOnClient();
             }
             else
             {
@@ -30,6 +33,7 @@ public class SceneChooser : NetworkBehaviour
         {
             Transform spawnedPlayer = (Transform)GameObject.Instantiate(player, transform.position, Quaternion.identity);
             spawnedPlayer.parent = transform;
+            networker.InitializeOnServer();
             if (isLocalPlayer)
             {
                 //if we are the server and spawned a local client, use this as a tester
