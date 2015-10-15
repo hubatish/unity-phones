@@ -3,35 +3,34 @@ using UnityEngine;
 
 namespace Server
 {
+    public enum ItemType { BlockItem };
 
     public class Inventory : MonoBehaviour
     {
-        public List<AbstractItem> playerItems;
+        private List<ItemType> items;
 
         // Use this for initialization
         void Start()
         {
-            playerItems = new List<AbstractItem>();
-            playerItems.Add(new BlockItem());
+            items = new List<ItemType> { ItemType.BlockItem };
         }
 
         // Update is called once per frame
         void Update()
         {
         }
-
-
-        public void AddItem(AbstractItem item)
+        
+        public void AddItem(ItemType item)
         {
-            playerItems.Add(item);
+            items.Add(item);
         }
 
         public void UseItem(int index)
         {
-            if (index >= 0 && index < playerItems.Count)
+            if (index >= 0 && index < items.Count)
             {
-                playerItems[index].Use(transform.position);
-                playerItems.RemoveAt(index);
+                ItemSpawner.Instance.Spawn(items[index], transform.position + Vector3.right);
+                items.RemoveAt(index);
             }
         }
 
