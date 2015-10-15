@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using Server;
 
 /// <summary>
 /// Handle all messages from client to server
@@ -9,7 +10,6 @@ using System.Collections;
 public class NetworkMessenger : NetworkBehaviour
 {
     public Server.PlayerMovement playerMovement;
-    public Server.Inventory inventory;
 
     protected void Awake()
     {
@@ -23,7 +23,6 @@ public class NetworkMessenger : NetworkBehaviour
     public void InitializeOnServer()
     {
         playerMovement = gameObject.GetComponentInChildren<Server.PlayerMovement>();
-        inventory = gameObject.GetComponentInChildren<Server.Inventory>();
     }
 
     [Command]
@@ -35,8 +34,8 @@ public class NetworkMessenger : NetworkBehaviour
     }
 
     [Command]
-    public void CmdUseItem(int index)
+    public void CmdUseItem(ItemType item)
     {
-        inventory.UseItem(index);
+        ItemSpawner.Instance.Spawn(item, playerMovement.transform.position + new Vector3(1, 0, 0));
     }
 }

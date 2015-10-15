@@ -1,37 +1,56 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Server
+namespace Client
 {
-    public enum ItemType { BlockItem };
-
-    public class Inventory : MonoBehaviour
+    public class Inventory
     {
-        private List<ItemType> items;
-
-        // Use this for initialization
-        void Start()
-        {
-            items = new List<ItemType> { ItemType.BlockItem };
+        private static Inventory _inv;
+        public static Inventory Instance { get
+            {
+                if (_inv == null) _inv = new Inventory();
+                return _inv;
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        private List<ItemType> items;
+        public SpriteRenderer attackButtonSprite;
+
+        private Inventory()
         {
+            items = new List<ItemType> { ItemType.BlockItem };
+            UpdateSprite();
         }
         
         public void AddItem(ItemType item)
         {
             items.Add(item);
+            UpdateSprite();
         }
 
         public void UseItem(int index)
         {
-            if (index >= 0 && index < items.Count)
+            if (items.Count > 0)
             {
-                ItemSpawner.Instance.Spawn(items[index], transform.position + Vector3.right);
-                items.RemoveAt(index);
+                UpdateSprite();
+                items.RemoveAt(0);
             }
+        }
+
+        public void RemoveItem()
+        {
+            if (items.Count > 0)
+            {
+                items.RemoveAt(0);
+            }
+        }
+
+        private void UpdateSprite()
+        {
+           /* if(items.Count >= 1)
+            {
+                attackButtonSprite.sprite = null;
+            } */
         }
 
     }

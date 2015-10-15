@@ -1,8 +1,7 @@
 ﻿//In Client scene, UI buttons call these functions
 //Passes these functions onto server middle man
 using UnityEngine;
-using UnityEngine.Networking;
-using System.Collections;
+using Client;
 
 public class ButtonInput : MonoBehaviour {
 
@@ -35,6 +34,7 @@ public class ButtonInput : MonoBehaviour {
 
     public void Attack()
     {
+        Inventory.Instance.UseItem(0);
         networker.CmdUseItem(0);
 
         Debug.Log("ATTCKING");
