@@ -35,8 +35,8 @@ public class NetworkMessenger : NetworkBehaviour
     }
 
     [Command]
-    public void CmdUseItem()
+    public void CmdUseItem(int index)
     {
-        inventory.UseItem();
+        inventory.UseItem(index);
     }
 }

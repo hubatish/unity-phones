@@ -35,6 +35,10 @@ public class ButtonInput : MonoBehaviour {
 
     public void Attack()
     {
-        networker.CmdUseItem();
+        networker.CmdUseItem(0);
+
+        Debug.Log("ATTCKING");
+        //inventory.UseItem(0);
+
     }
 }
