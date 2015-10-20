@@ -7,16 +7,16 @@ public class CustomNetworkManager : NetworkManager {
 
 	public void StartupGame()
 	{
-		SetPort();
+		SetPort(); 
 		NetworkManager.singleton.StartServer();
-		NetworkManager.singleton.ServerChangeScene("networkStart");
+		NetworkManager.singleton.ServerChangeScene("networkStart"); //Loads network scene (game scene with maze) and moves network manager to the scene
 	}
 
 	public void JoinGame()
 	{
 		SetIPAddress();
 		SetPort();
-		StartClient();
+		NetworkManager.singleton.StartClient(); //Adds player to server 
 	}
 
 	void SetIPAddress()

@@ -5,7 +5,7 @@ using System.Collections;
 
 public class PlayerMovement : NetworkBehaviour {
 	
-	private float moveSpeed = 2.0f;
+	[SerializeField] private float moveSpeed = 2.0f;
     Rigidbody2D rb2d;
 
     // Use this for initialization
@@ -18,5 +18,15 @@ public class PlayerMovement : NetworkBehaviour {
     {
         Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
         transform.Translate(velocity);
+    }
+
+    public float getMoveSpeed()
+    {
+        return moveSpeed;
+    }
+
+    public void setMoveSpeed(float f)
+    {
+        moveSpeed = f;
     }
 }

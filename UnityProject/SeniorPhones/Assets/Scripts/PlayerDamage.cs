@@ -28,6 +28,7 @@ public class PlayerDamage : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         Debug.Log("COLLISIONING");
+
         if(coll.gameObject.tag == "Item")
         {
             blinkTime = TimeBlinking;
