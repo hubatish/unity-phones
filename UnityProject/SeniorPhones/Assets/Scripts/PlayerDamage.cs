@@ -27,6 +27,9 @@ public class PlayerDamage : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        //For immediate testing concerns, the state handler call is placed below
+        //Later, it will only be called upon being hit
+        //GetComponent<StateHandler>().StunPlayer();
         if(coll.gameObject.tag == "Item")
         {
             blinkTime = TimeBlinking;

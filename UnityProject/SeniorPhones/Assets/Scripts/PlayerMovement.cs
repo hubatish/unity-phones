@@ -21,6 +21,16 @@ namespace Server
             Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
             transform.Translate(velocity);
         }
+
+        public float GetMoveSpeed()
+        {
+            return moveSpeed;
+        }
+
+        public void SetMoveSpeed(float newSpeed)
+        {
+            moveSpeed = newSpeed;
+        }
     }
 }
 
