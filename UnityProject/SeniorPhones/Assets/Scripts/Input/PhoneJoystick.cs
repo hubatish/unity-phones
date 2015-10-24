@@ -5,9 +5,10 @@ using UnityEngine.EventSystems;
 
 /// <summary>
 /// Should be in a canvas
+/// 
+///     Is activated & deactivated by a larger button area underneath the joystick
 /// </summary>
 public class PhoneJoystick : MonoBehaviour {
-
     [SerializeField]
     protected Canvas canvas;
 
@@ -16,12 +17,10 @@ public class PhoneJoystick : MonoBehaviour {
 
     NetworkMessenger playerMovement;
 
-	// Use this for initialization
 	void Start () {
         playerMovement = ClientNetworkToolbox.Instance.GetNetworkMessenger();
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButton(0))
         {
@@ -40,7 +39,7 @@ public class PhoneJoystick : MonoBehaviour {
         else
         {
             joystickImage.position = transform.position;
-            //enabled = false;
+            enabled = false;
         }
     }
 }
