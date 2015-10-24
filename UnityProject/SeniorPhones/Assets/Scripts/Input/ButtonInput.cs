@@ -6,6 +6,7 @@ using Client;
 public class ButtonInput : MonoBehaviour {
 
 	NetworkMessenger networker;
+    public GameObject inventoryUI;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +39,10 @@ public class ButtonInput : MonoBehaviour {
         networker.CmdUseItem(0);
 
         Debug.Log("ATTCKING");
-        //inventory.UseItem(0);
+    }
 
+    public void ToggleInventory()
+    {
+        inventoryUI.SetActive(!inventoryUI.activeInHierarchy);
     }
 }

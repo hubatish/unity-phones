@@ -38,4 +38,10 @@ public class NetworkMessenger : NetworkBehaviour
     {
         ItemSpawner.Instance.Spawn(item, playerMovement.transform.position + new Vector3(1, 0, 0));
     }
+
+    [ClientRpc]
+    public void RpcAddItem(ItemType item)
+    {
+        Client.Inventory.Instance.AddItem(item);
+    }
 }
