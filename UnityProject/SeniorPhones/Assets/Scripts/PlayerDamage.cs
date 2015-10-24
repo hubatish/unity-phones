@@ -29,10 +29,11 @@ public class PlayerDamage : MonoBehaviour {
     {
         //For immediate testing concerns, the state handler call is placed below
         //Later, it will only be called upon being hit
-        //GetComponent<StateHandler>().StunPlayer();
+        //
         if(coll.gameObject.tag == "Item")
         {
             blinkTime = TimeBlinking;
+            GetComponent<StateHandler>().StunPlayer();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// Handle all messages from client to server
@@ -39,4 +40,18 @@ public class NetworkMessenger : NetworkBehaviour
     {
         inventory.UseItem();
     }
+
+    [ClientRpc]
+    public void  RpcDisableButton(string buttonName)
+    {
+        Button aButton = GameObject.Find(buttonName).GetComponent<Button>();
+        aButton.interactable = false;
+    }
+    [ClientRpc]
+    public void RpcEnableButton(string buttonName)
+    {
+        Button aButton = GameObject.Find(buttonName).GetComponent<Button>();
+        aButton.interactable = true; 
+    }
+
 }
