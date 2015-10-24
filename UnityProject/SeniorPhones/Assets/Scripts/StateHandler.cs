@@ -35,6 +35,8 @@ public class StateHandler : MonoBehaviour {
             StartCoroutine("Stunned");
         else if(currentState == State.Attack)
             StartCoroutine("SeverelyStunned");
+        else if(currentState == State.Stun)
+            StartCoroutine("Recovering"); //Placeholder for losing item if hit when stunned
     }
 
     public void PlayerAttack(float duration)
@@ -83,7 +85,8 @@ public class StateHandler : MonoBehaviour {
         SetPlayerColor(Color.yellow);
         yield return new WaitForSeconds(stunDuration);
         //CHANGE LAYER,CALL RECOVERY
-        StartCoroutine("Recovering");
+        if(currentState == State.Stun) // This will be removed once item drop is removed
+            StartCoroutine("Recovering");
     }
 
     //Change to a different layer so can't be hit and wait, but can move now
@@ -102,7 +105,6 @@ public class StateHandler : MonoBehaviour {
     {
         currentState = State.SevereStun;
         //Debug.Log("I'm in Severely Stunned");
-        StopPlayerMovement();
         networker.RpcDisableButton("AttackButton");
         SetPlayerColor(Color.magenta);
         yield return new WaitForSeconds(stunDuration * 1.5f);
