@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21281770}
   - 50: {fileID: 5046138}
   - 61: {fileID: 6169502}
+  - 114: {fileID: 11442686}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -59,6 +60,43 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11442686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Properties:
+    Properties: []
+    Groups: []
+    Hidden: 
+  Links:
+    Links:
+    - LIIF: -1389461451
+      InstanceTarget: {fileID: 11442686}
+    - LIIF: 911912922
+      InstanceTarget: {fileID: 143970}
+    - LIIF: 1067232593
+      InstanceTarget: {fileID: 464542}
+    - LIIF: -1647740131
+      InstanceTarget: {fileID: 21281770}
+    - LIIF: -1218568075
+      InstanceTarget: {fileID: 5046138}
+    - LIIF: -1835735429
+      InstanceTarget: {fileID: 6169502}
+  Modifications:
+    Modificated: []
+    NonPrefabObjects: []
+    NonPrefabComponents: []
+    RemovedObjects: 
+    TransformParentChanges: []
+  ParentPrefabGUID: 
+  PrefabGUID: ef877878c0e8f2647b56b9244e4f19f4
 --- !u!212 &21281770
 SpriteRenderer:
   m_ObjectHideFlags: 1
