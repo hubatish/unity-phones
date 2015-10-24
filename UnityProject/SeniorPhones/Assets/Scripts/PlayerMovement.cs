@@ -8,6 +8,7 @@ namespace Server
     public class PlayerMovement : MonoBehaviour
     {
         private float moveSpeed = 2.0f;
+        private Vector2 previousDirection;
         Rigidbody2D rb2d;
 
         // Use this for initialization
@@ -20,6 +21,7 @@ namespace Server
         {
             Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
             transform.Translate(velocity);
+            previousDirection = direction;
         }
 
         public float GetMoveSpeed()
@@ -30,6 +32,11 @@ namespace Server
         public void SetMoveSpeed(float newSpeed)
         {
             moveSpeed = newSpeed;
+        }
+        
+        public Vector2 GetPreviousDirection()
+        {
+            return previousDirection;
         }
     }
 }

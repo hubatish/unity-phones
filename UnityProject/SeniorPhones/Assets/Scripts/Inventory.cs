@@ -4,10 +4,11 @@ using UnityEngine.Networking;
 
 namespace Server
 {
-    public class Inventory : MonoBehaviour
+    public class Inventory : ZBehaviour
     {
         public GameObject item;
         private StateHandler playerState;
+        private float attackDistance = 1f;
 
         void Start()
         {
@@ -18,7 +19,8 @@ namespace Server
         {
             if (item != null)
             {
-                Instantiate(item, transform.position + new Vector3(1, 0, 0), Quaternion.identity);
+                Vector2 dir = Cached<PlayerMovement>().GetPreviousDirection();
+                Instantiate(item, transform.position + (Vector3)dir * attackDistance, Quaternion.identity);
                 playerState.PlayerAttack(item.GetComponent<ItemInformation>().attackDuration);
             }
         }
