@@ -22,12 +22,14 @@ namespace Client
             }
         }
 
+        public int Count { get { return items.Count; } }
+
         private List<ItemType> items;
         public static int MaxItemCount;
 
         private Inventory()
         {
-            items = new List<ItemType> { ItemType.BlockItem };
+            items = new List<ItemType>();
         }
         
         public void AddItem(ItemType item)
@@ -40,34 +42,28 @@ namespace Client
             }
         }
 
-        public List<Item> GetItems()
+        public Item GetItem(int index)
         {
-           return items.Select(x => ClientItemList.Instance.GetItem(x)).ToList();
-        }
-
-        public void UseItem(int index)
-        {
-            if (items.Count > 0)
+            if (items.Count > index)
             {
-                items.RemoveAt(0);
-
-                if (OnItemRemoval != null)
-                {
-                    OnItemAdd(ClientItemList.Instance.GetItem(items[index]));
-                }
+                return ClientItemList.Instance.GetItem(items[index]);
+            }
+            else
+            {
+                return null;
             }
         }
 
-        public void RemoveItem()
+        public void RemoveItem(int index)
         {
             if (items.Count > 0)
             {
-                items.RemoveAt(0);
-
                 if (OnItemRemoval != null)
                 {
-                    OnItemAdd(ClientItemList.Instance.GetItem(items[0]));
+                    OnItemRemoval(ClientItemList.Instance.GetItem(items[index]));
                 }
+
+                items.RemoveAt(index);
             }
         }
 

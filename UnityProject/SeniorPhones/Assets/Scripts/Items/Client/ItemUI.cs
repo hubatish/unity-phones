@@ -1,21 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Client {
 
-    public class ItemUIUpdater : MonoBehaviour {
+    public class ItemUI : MonoBehaviour {
 
-        public List<Item> items = new List<Item>(Inventory.MaxItemCount);
-        public List<SpriteRenderer> uiItems = new List<SpriteRenderer>(Inventory.MaxItemCount);
+        private List<Item> items = new List<Item>(Inventory.MaxItemCount);
+        public List<Image> uiItems = new List<Image>(Inventory.MaxItemCount);
+        public static ItemUI Instance;
 
         // Use this for initialization
         void Awake()
         {
+            Instance = this;
+            Inventory.Instance.OnItemAdd += AddItemHandler;
+            Inventory.Instance.OnItemRemoval += RemoveItemHandler;
         }
 
         void Start()
         {
-            Inventory.Instance.OnItemAdd += AddItemHandler;
+            Inventory.Instance.AddItem(ItemType.BlockItem);
         }
 
         private void AddItemHandler(Item item)
@@ -39,8 +44,13 @@ namespace Client {
             {
                 uiItems[i].sprite = uiItems[i + 1].sprite;
             }
-
+            
             uiItems[i].sprite = null;
+        }
+
+        public Item GetItem(int index)
+        {
+            return items[index];
         }
     }
 }
