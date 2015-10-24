@@ -35,7 +35,7 @@ public class StateHandler : MonoBehaviour {
             StartCoroutine("Stunned");
         else if(currentState == State.Attack)
             StartCoroutine("SeverelyStunned");
-        else if(currentState == State.Stun)
+        else if(currentState == State.Stun || currentState == State.SevereStun)
             StartCoroutine("Recovering"); //Placeholder for losing item if hit when stunned
     }
 
@@ -108,7 +108,8 @@ public class StateHandler : MonoBehaviour {
         networker.RpcDisableButton("AttackButton");
         SetPlayerColor(Color.magenta);
         yield return new WaitForSeconds(stunDuration * 1.5f);
-        StartCoroutine("Recovering");
+        if(currentState == State.SevereStun)
+            StartCoroutine("Recovering");
 
     }
 
