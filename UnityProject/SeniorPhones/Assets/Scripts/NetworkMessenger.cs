@@ -36,6 +36,7 @@ public class NetworkMessenger : NetworkBehaviour
     [Command]
     public void CmdUseItem(ItemType item)
     {
+        Debug.Log("Using item : " + item);
         ItemSpawner.Instance.Spawn(item, playerMovement.transform.position + new Vector3(1, 0, 0));
     }
 

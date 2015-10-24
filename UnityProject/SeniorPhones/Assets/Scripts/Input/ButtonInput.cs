@@ -54,8 +54,8 @@ public class ButtonInput : MonoBehaviour {
         {
             if (prevClickIndex == index)
             {
-                Inventory.Instance.RemoveItem(index);
                 networker.CmdUseItem(Inventory.Instance.GetItem(index).itemType);
+                Inventory.Instance.RemoveItem(index);
                 indexToSet = -1;
             }
             else
