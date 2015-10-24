@@ -22,6 +22,7 @@ namespace Server
             Vector2 velocity = direction * moveSpeed * Time.fixedDeltaTime;
             transform.Translate(velocity);
             previousDirection = direction;
+            Debug.Log("Set prev dir: " + previousDirection);
         }
 
         public float GetMoveSpeed()
@@ -36,6 +37,7 @@ namespace Server
         
         public Vector2 GetPreviousDirection()
         {
+            Debug.Log("Get dir: " + previousDirection);
             return previousDirection;
         }
     }
