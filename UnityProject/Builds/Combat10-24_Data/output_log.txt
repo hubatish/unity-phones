@@ -1,0 +1,99 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.055 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\ZAch\gmaking\unity\unity-phones-sproject\UnityProject\Builds\Combat10-24_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 355c -> priority: 1 
+  Thread -> id: 2c0c -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.008809 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 325.
+Total: 0.447323 ms (FindLiveObjects: 0.035495 ms CreateObjectMapping: 0.029507 ms MarkObjects: 0.366497 ms  DeleteObjects: 0.014540 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.812966 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.537558 ms (FindLiveObjects: 0.029080 ms CreateObjectMapping: 0.022665 ms MarkObjects: 0.479397 ms  DeleteObjects: 0.005131 ms)
+
+A connection has already been set as ready. There can only be one.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Did not find target for RPC message for 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
+aissp: time {176088} lastRecTime {174049} DisTme {2000}, rtt {0} 
+ 
+(Filename:  Line: 1848)
+
+UNet Client Disconnect Error: Timeout
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
