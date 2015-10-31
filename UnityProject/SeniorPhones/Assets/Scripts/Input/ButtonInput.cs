@@ -1,12 +1,15 @@
 ﻿//In Client scene, UI buttons call these functions
 //Passes these functions onto server middle man
 using UnityEngine;
-using UnityEngine.Networking;
-using System.Collections;
+using Client;
+using UnityEngine.UI;
 
 public class ButtonInput : MonoBehaviour {
 
 	NetworkMessenger networker;
+    public GameObject inventoryUI;
+    public Text textBox;
+    private int prevClickIndex = -1;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +38,33 @@ public class ButtonInput : MonoBehaviour {
 
     public void Attack()
     {
-        networker.CmdUseItem();
+        networker.CmdUseItem(ItemType.BlockItem);
+    }
+
+    public void ToggleInventory()
+    {
+        inventoryUI.SetActive(!inventoryUI.activeInHierarchy);
+    }
+
+    public void ClickItem(int index)
+    {
+        int indexToSet = index;
+
+        if (index < Inventory.Instance.Count)
+        {
+            if (prevClickIndex == index)
+            {
+                networker.CmdUseItem(Inventory.Instance.GetItem(index).itemType);
+                Inventory.Instance.RemoveItem(index);
+                indexToSet = -1;
+            }
+            else
+            {
+                textBox.text += System.Environment.NewLine + Inventory.Instance.GetItem(index).ItemDescription;
+            }
+        }
+
+        prevClickIndex = indexToSet;
+
     }
 }
